@@ -1,0 +1,75 @@
+header {
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 7rem;
+}
+
+.header_container {
+    position: relative;
+    height: 100%;
+    text-align: center;
+}
+
+/* ========== cta ========== */
+.cta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+/* ========== header socials ========== */
+.header_socials {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    left: 0;
+    bottom: 3rem;
+
+}
+
+.header_socials::after {
+    content: '';
+    width: 1px;
+    height: 2rem;
+    background-color: var(--color-primary);
+}
+
+/* ========== me ========== */
+.me {
+    position: absolute;
+    overflow: hidden;
+    font-size: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2rem;
+}
+
+/* ========== scroll down ========== */
+.scroll_down {
+    position: absolute;
+    right: 0;
+    bottom: 3rem;
+    font-size: 2rem;
+}
+
+/* ========== media queries (large devices) ========== */
+@media screen and (max-width: 1024px) {
+    header {
+        height: 68vh;
+    }
+
+    .header_socials,
+    .scroll_down {
+        display: none;
+    }
+}
+
+/* ========== media queries (small devices) ========== */
+@media screen and (max-width: 600px) {
+    header {
+        height: 100vh;
+    }
+}

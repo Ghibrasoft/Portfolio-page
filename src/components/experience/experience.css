@@ -1,0 +1,66 @@
+h2 , h3 , .exp_icon {
+    text-align: center;
+    color: var(--color-primary);
+}
+
+article > div > small {
+    color: var(--color-light);
+    font-style: italic;
+}
+
+.exp_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.exp_card {
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    background: var(--color-bg-alt);
+    padding: 1rem;
+    margin-top: 5rem;
+    transition: var(--transition);
+}
+.exp_card:hover {
+    background: var(--color-bg);
+    border: 1px solid var(--color-primary-alt);
+    transition: var(--transition);
+}
+.exp_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+article {
+    display: flex;
+    gap: .3rem;
+}
+
+/* ========== media queries (large devices) ========== */
+@media screen and (max-width: 1024px) {
+    .exp_container {
+        grid-template-columns: 1fr;
+    }
+    .exp_container > div {
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+    .exp_content {
+        padding: 1rem;
+    }
+}
+
+/* ========== media queries (small devices) ========== */
+@media screen and (max-width: 600px) {
+    .exp_container {
+        gap: 1rem;
+    }
+    .exp_container > div {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+}
